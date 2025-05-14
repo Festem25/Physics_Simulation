@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysicsHub - Interactive Physics Education</title>
+    <meta name="description" content="Learn physics concepts through interactive simulations, video lessons, and comprehensive resources.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+        /* Ensure the hero section has the proper background and styles */
+        .hero {
+            background-color: #111827;
+            padding: 4rem 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-animation {
+            flex: 1;
+        }
+        
+        .animation-canvas {
+            width: 100%;
+            height: 300px;
+            background-color: #111827;
+            border-radius: 8px;
+        }
+        
+        /* Make sure the blue color stands out */
+        .placeholder-preview {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        }
+        
+        .placeholder-thumbnail {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <!-- Header content will be inserted by JavaScript -->
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Discover the Wonders of Physics</h1>
+                        <p>Interactive simulations, teaching resources, and educational
+                            materials to make physics accessible and engaging for everyone.</p>
+                        <div class="hero-buttons">
+                            <a href="pages/simulations.html" class="button button-primary">Explore Simulations</a>
+                            <a href="pages/teaching.html" class="button button-outline">Teaching Materials</a>
+                        </div>
+                    </div>
+                    <div class="hero-animation">
+                        <canvas id="hero-canvas" class="animation-canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="container">
+                <h2>About PhysicsHub</h2>
+                <p>We're dedicated to making physics education accessible, engaging, and
+                    interactive for students and educators worldwide. Our team of physics
+                    educators and technology experts creates high-quality resources for
+                    classrooms and self-learners.</p>
+                
+                <div class="feature-cards">
+                    <div class="card">
+                        <div class="card-icon">🔬</div>
+                        <div class="card-content">
+                            <h3>Our Mission</h3>
+                            <p>To ignite curiosity about the physical world through interactive
+                                learning experiences that make physics concepts intuitive and
+                                engaging.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">👥</div>
+                        <div class="card-content">
+                            <h3>Our Team</h3>
+                            <p>A collaborative group of physics educators, programmers, and
+                                designers passionate about creating the next generation of science
+                                education tools.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon">📈</div>
+                        <div class="card-content">
+                            <h3>Our Impact</h3>
+                            <p>Reaching over 500,000 students and 10,000 educators worldwide with
+                                free, high-quality physics education resources and tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Simulations Section -->
+        <section class="featured-simulations">
+            <div class="container">
+                <h2>Interactive Physics Simulations</h2>
+                <p>Explore fundamental physics concepts through our interactive simulations.
+                    Adjust parameters in real-time and see how physical systems respond.</p>
+                
+                <div class="simulation-cards" id="simulation-cards">
+                    <!-- Simulation cards will be inserted by JavaScript -->
+                    <div class="simulation-card">
+                        <div class="simulation-preview">
+                            <div class="placeholder-preview"></div>
+                        </div>
+                        <div class="simulation-info">
+                            <h3>Simple Pendulum</h3>
+                            <p>Explore the principles of simple harmonic motion with an interactive pendulum simulation.</p>
+                            <a href="pages/simulations.html?id=1" class="button button-outline">Launch Simulation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="simulation-card">
+                        <div class="simulation-preview">
+                            <div class="placeholder-preview"></div>
+                        </div>
+                        <div class="simulation-info">
+                            <h3>Wave Interference</h3>
+                            <p>Visualize constructive and destructive interference patterns with adjustable wave sources.</p>
+                            <a href="pages/simulations.html?id=2" class="button button-outline">Launch Simulation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="simulation-card">
+                        <div class="simulation-preview">
+                            <div class="placeholder-preview"></div>
+                        </div>
+                        <div class="simulation-info">
+                            <h3>Projectile Motion</h3>
+                            <p>Study the effects of launch angle, initial velocity, and air resistance on projectile trajectories.</p>
+                            <a href="pages/simulations.html?id=3" class="button button-outline">Launch Simulation</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="center-button">
+                    <a href="pages/simulations.html" class="button button-primary">View All Simulations</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Join Our Physics Community</h2>
+                <p>Sign up to get updates on new resources, simulations, and educational content.</p>
+                
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="button button-accent">Subscribe</button>
+                </form>
+                <p id="newsletter-message" class="form-message"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <!-- Footer content will be inserted by JavaScript -->
+    </footer>
+
+    <!-- Login Modal (hidden by default) -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="button button-primary">Sign In</button>
+                <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal (hidden by default) -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Account</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="reg-username">Username</label>
+                    <input type="text" id="reg-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" name="password" required>
+                </div>
+                <button type="submit" class="button button-primary">Register</button>
+                <p>Already have an account? <a href="#" id="show-login">Sign In</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/pendulum.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Standalone script to ensure hero animation works -->
+    <script>
+        // Make sure the hero animation runs immediately
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroCanvas = document.getElementById('hero-canvas');
+            if (heroCanvas) {
+                // Set canvas dimensions
+                heroCanvas.width = heroCanvas.offsetWidth;
+                heroCanvas.height = heroCanvas.offsetHeight;
+                
+                const ctx = heroCanvas.getContext('2d');
+                const width = heroCanvas.width;
+                const height = heroCanvas.height;
+                
+                let time = 0;
+                
+                function animate() {
+                    ctx.clearRect(0, 0, width, height);
+                    
+                    // Draw background gradient
+                    const gradient = ctx.createLinearGradient(0, 0, width, height);
+                    gradient.addColorStop(0, '#111827');
+                    gradient.addColorStop(1, '#1E3A8A');
+                    ctx.fillStyle = gradient;
+                    ctx.fillRect(0, 0, width, height);
+                    
+                    // Draw background pattern
+                    ctx.fillStyle = 'rgba(59, 130, 246, 0.1)';
+                    for (let i = 0; i < 5; i++) {
+                        ctx.beginPath();
+                        ctx.arc(
+                            width * (0.2 + i * 0.15), 
+                            height * 0.5, 
+                            20 + i * 15, 
+                            0, 
+                            Math.PI * 2
+                        );
+                        ctx.fill();
+                    }
+                    
+                    // Draw pendulum (faster animation)
+                    const originX = width / 2;
+                    const originY = height * 0.3;
+                    const pendulumLen = height * 0.4;
+                    const angle = Math.PI / 4 * Math.sin(time * 5); // Fast animation
+                    
+                    const bobX = originX + Math.sin(angle) * pendulumLen;
+                    const bobY = originY + Math.cos(angle) * pendulumLen;
+                    
+                    // String
+                    ctx.beginPath();
+                    ctx.moveTo(originX, originY);
+                    ctx.lineTo(bobX, bobY);
+                    ctx.strokeStyle = '#6b7280';
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+                    
+                    // Pivot
+                    ctx.beginPath();
+                    ctx.arc(originX, originY, 5, 0, Math.PI * 2);
+                    ctx.fillStyle = '#1f2937';
+                    ctx.fill();
+                    
+                    // Bob
+                    ctx.beginPath();
+                    ctx.arc(bobX, bobY, 20, 0, Math.PI * 2);
+                    
+                    // Gradient for 3D effect
+                    const bobGradient = ctx.createRadialGradient(
+                        bobX - 5, bobY - 5, 0,
+                        bobX, bobY, 20
+                    );
+                    bobGradient.addColorStop(0, '#3b82f6');
+                    bobGradient.addColorStop(1, '#1d4ed8');
+                    
+                    ctx.fillStyle = bobGradient;
+                    ctx.fill();
+                    
+                    ctx.strokeStyle = '#1e40af';
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                    
+                    // Add highlight to bob
+                    ctx.beginPath();
+                    ctx.arc(bobX - 7, bobY - 7, 5, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+                    ctx.fill();
+                    
+                    // Update time and request next frame
+                    time += 0.016;
+                    requestAnimationFrame(animate);
+                }
+                
+                animate();
+            }
+        });
+    </script>
+</body>
+</html>
