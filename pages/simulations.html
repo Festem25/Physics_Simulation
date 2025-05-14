@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Physics Simulations | PhysicsHub</title>
+    <meta name="description" content="Explore fundamental physics concepts through our interactive simulations. Adjust parameters in real-time and see how physical systems respond.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/simulations.css">
+</head>
+<body>
+    <header id="main-header">
+        <!-- Header content will be inserted by JavaScript -->
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Interactive Physics Simulations</h1>
+                <p>Explore fundamental physics concepts through our interactive simulations.
+                   Adjust parameters in real-time and see how physical systems respond.</p>
+            </div>
+        </section>
+
+        <section class="simulation-tabs">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="pendulum">Pendulum</button>
+                    <button class="tab-button" data-tab="wave">Wave Interference</button>
+                    <button class="tab-button" data-tab="projectile">Projectile Motion</button>
+                </div>
+
+                <div class="tab-content active" id="pendulum-tab">
+                    <h2>Pendulum Motion Simulation</h2>
+                    <p>Explore the principles of simple harmonic motion by adjusting mass, length, and gravity.
+                       This simulation demonstrates how a pendulum's period is affected by different factors.</p>
+                    
+                    <div class="simulation-container">
+                        <div class="pendulum-container">
+                            <!-- Pendulum simulation canvas will be inserted here -->
+                        </div>
+                        
+                        <div class="simulation-controls">
+                            <div class="control-group">
+                                <label for="length-slider">Length</label>
+                                <input type="range" id="length-slider" min="50" max="300" value="200">
+                                <span id="length-value">200 cm</span>
+                            </div>
+                            
+                            <div class="control-group">
+                                <label for="gravity-slider">Gravity</label>
+                                <input type="range" id="gravity-slider" min="1" max="20" step="0.1" value="9.8">
+                                <span id="gravity-value">9.8 m/s²</span>
+                            </div>
+                            
+                            <div class="control-group">
+                                <label for="damping-slider">Damping</label>
+                                <input type="range" id="damping-slider" min="0.9" max="1" step="0.001" value="0.995">
+                                <span id="damping-value">0.5%</span>
+                            </div>
+                            
+                            <div class="buttons">
+                                <button id="pendulum-reset" class="button button-outline">Reset</button>
+                                <button id="pendulum-pause" class="button button-outline">Pause</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="simulation-info">
+                        <h3>Physics Concepts</h3>
+                        <ul>
+                            <li>Simple harmonic motion</li>
+                            <li>Conservation of energy</li>
+                            <li>Gravitational force</li>
+                            <li>Damping and friction</li>
+                        </ul>
+                        
+                        <h3>Instructions</h3>
+                        <p>Use the sliders to adjust the pendulum's length, gravity, and damping.
+                           Click and drag the pendulum bob to change its starting position.
+                           Press the play/pause button to control the animation.</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="wave-tab">
+                    <h2>Wave Interference Simulation</h2>
+                    <p>Visualize constructive and destructive interference patterns with adjustable wave sources.
+                       Understand how waves combine and interact in two dimensions.</p>
+                    
+                    <div class="simulation-container">
+                        <div class="wave-container">
+                            <!-- Wave simulation canvas will be inserted here -->
+                        </div>
+                        
+                        <div class="simulation-controls">
+                            <!-- Wave simulation controls will go here -->
+                        </div>
+                    </div>
+                    
+                    <div class="simulation-info">
+                        <h3>Physics Concepts</h3>
+                        <ul>
+                            <li>Wave propagation</li>
+                            <li>Constructive and destructive interference</li>
+                            <li>Wavelength and frequency</li>
+                            <li>Phase differences</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="projectile-tab">
+                    <h2>Projectile Motion Simulation</h2>
+                    <p>Study the effects of launch angle, initial velocity, and air resistance on projectile trajectories.
+                       Visualize the path of objects launched into the air and analyze their motion.</p>
+                    
+                    <div class="simulation-container">
+                        <div class="projectile-container">
+                            <!-- Projectile simulation canvas will be inserted here -->
+                        </div>
+                        
+                        <div class="simulation-controls">
+                            <!-- Projectile simulation controls will go here -->
+                        </div>
+                    </div>
+                    
+                    <div class="simulation-info">
+                        <h3>Physics Concepts</h3>
+                        <ul>
+                            <li>Projectile motion</li>
+                            <li>Kinematics in two dimensions</li>
+                            <li>Air resistance and drag</li>
+                            <li>Gravitational acceleration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="more-simulations">
+            <div class="container">
+                <h2>Explore More Simulations</h2>
+                <div class="simulation-grid" id="simulation-grid">
+                    <!-- More simulation cards will be inserted by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <!-- Footer content will be inserted by JavaScript -->
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/pendulum.js"></script>
+    <script src="../js/wave.js"></script>
+    <script src="../js/projectile.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Q&A Forum | PhysicsHub</title>
+    <meta name="description" content="Ask questions and get answers from physics experts, educators, and enthusiasts in our community Q&A forum.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body>
+    <header id="main-header">
+        <!-- Header content will be inserted by JavaScript -->
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Physics Q&A Forum</h1>
+                <p>Ask questions and get answers from physics experts, educators, and enthusiasts in our community.</p>
+                <button id="ask-question-button" class="button button-primary">Ask a Question</button>
+            </div>
+        </section>
+
+        <section class="questions-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Browse Questions</h2>
+                    <div class="filters">
+                        <div class="filter-group">
+                            <label for="status-filter">Status:</label>
+                            <select id="status-filter">
+                                <option value="all">All Statuses</option>
+                                <option value="pending">Pending</option>
+                                <option value="answered">Answered</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="category-filter">Category:</label>
+                            <select id="category-filter">
+                                <option value="all">All Categories</option>
+                                <option value="mechanics">Mechanics</option>
+                                <option value="thermodynamics">Thermodynamics</option>
+                                <option value="electromagnetism">Electromagnetism</option>
+                                <option value="optics">Optics</option>
+                                <option value="quantum">Quantum Physics</option>
+                                <option value="modern">Modern Physics</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="questions-list" id="questions-list">
+                    <!-- Questions will be inserted by JavaScript -->
+                    <div class="question-card">
+                        <div class="question-status answered">Answered</div>
+                        <div class="question-content">
+                            <h3>How do I calculate the period of a pendulum?</h3>
+                            <p>I'm working on a physics lab about pendulums. What's the formula to calculate the period, and what factors affect it?</p>
+                            <div class="question-meta">
+                                <span class="question-category">Mechanics</span>
+                                <span class="question-author">Asked by StudentPhysics101</span>
+                                <span class="question-date">Sep 15, 2023</span>
+                                <span class="answer-count">3 answers</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <div class="question-status pending">Pending</div>
+                        <div class="question-content">
+                            <h3>Explanation of quantum tunneling</h3>
+                            <p>Can someone explain quantum tunneling in simple terms? I understand that it allows particles to pass through barriers, but I don't understand the underlying principles.</p>
+                            <div class="question-meta">
+                                <span class="question-category">Quantum Physics</span>
+                                <span class="question-author">Asked by QuantumCurious</span>
+                                <span class="question-date">Sep 18, 2023</span>
+                                <span class="answer-count">1 answer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <button class="pagination-button active">1</button>
+                    <button class="pagination-button">2</button>
+                    <button class="pagination-button">3</button>
+                    <button class="pagination-button">Next →</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="question-guidelines">
+            <div class="container">
+                <h2>Asking Good Questions</h2>
+                <p>To get the best answers, follow these guidelines when asking questions:</p>
+                
+                <div class="guidelines-grid">
+                    <div class="guideline">
+                        <div class="guideline-icon">✓</div>
+                        <div class="guideline-content">
+                            <h3>Be Specific</h3>
+                            <p>Clearly state what you're trying to understand or solve. Include relevant details such as equations, context, and what you've tried so far.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="guideline">
+                        <div class="guideline-icon">✓</div>
+                        <div class="guideline-content">
+                            <h3>Show Your Work</h3>
+                            <p>Explain your current understanding and any attempts you've made to solve the problem. This helps answerers provide more targeted help.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="guideline">
+                        <div class="guideline-icon">✓</div>
+                        <div class="guideline-content">
+                            <h3>Use Clear Titles</h3>
+                            <p>Write descriptive titles that summarize your specific question, not vague statements like "Help with physics problem."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="guideline">
+                        <div class="guideline-icon">✓</div>
+                        <div class="guideline-content">
+                            <h3>Format Equations</h3>
+                            <p>Use clear notation for equations and variables. For complex equations, consider using a diagram or image.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <!-- Footer content will be inserted by JavaScript -->
+    </footer>
+
+    <!-- Ask Question Modal -->
+    <div id="question-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ask a Physics Question</h2>
+            <form id="question-form">
+                <div class="form-group">
+                    <label for="question-title">Title</label>
+                    <input type="text" id="question-title" name="title" required placeholder="Summarize your question in a single sentence">
+                </div>
+                <div class="form-group">
+                    <label for="question-category">Category</label>
+                    <select id="question-category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="mechanics">Mechanics</option>
+                        <option value="thermodynamics">Thermodynamics</option>
+                        <option value="electromagnetism">Electromagnetism</option>
+                        <option value="optics">Optics</option>
+                        <option value="quantum">Quantum Physics</option>
+                        <option value="modern">Modern Physics</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="question-content">Question Details</label>
+                    <textarea id="question-content" name="content" rows="6" required placeholder="Describe your question in detail. Include any relevant background, what you've tried so far, and what specifically you're trying to understand."></textarea>
+                </div>
+                <button type="submit" class="button button-primary">Submit Question</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
