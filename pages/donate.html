@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support PhysicsHub | Donate</title>
+    <meta name="description" content="Support the development of physics education resources by donating to PhysicsHub. Help us create more simulations, video lessons, and educational materials.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body>
+    <header id="main-header">
+        <!-- Header content will be inserted by JavaScript -->
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Support PhysicsHub</h1>
+                <p>Help us create more high-quality physics education resources for students and educators worldwide.</p>
+            </div>
+        </section>
+
+        <section class="donation-options">
+            <div class="container">
+                <h2>Choose How to Support Us</h2>
+                <p>Your donation helps fund the development of new simulations, video lessons, and educational materials.</p>
+                
+                <div class="donation-tabs">
+                    <button class="donation-tab active" data-tab="one-time">One-time Donation</button>
+                    <button class="donation-tab" data-tab="monthly">Monthly Support</button>
+                    <button class="donation-tab" data-tab="project">Fund a Project</button>
+                </div>
+                
+                <div class="donation-content active" id="one-time-tab">
+                    <p>Make a one-time contribution to support our mission of accessible physics education.</p>
+                    
+                    <div class="amount-options">
+                        <button class="amount-option" data-amount="10">$10</button>
+                        <button class="amount-option" data-amount="25">$25</button>
+                        <button class="amount-option" data-amount="50">$50</button>
+                        <button class="amount-option" data-amount="100">$100</button>
+                        <button class="amount-option custom" data-amount="custom">Custom</button>
+                    </div>
+                    
+                    <div class="custom-amount" style="display: none;">
+                        <label for="custom-amount-input">Enter amount:</label>
+                        <div class="custom-amount-input-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="custom-amount-input" min="1" step="1" placeholder="Enter amount">
+                        </div>
+                    </div>
+                    
+                    <button class="button button-primary donate-button">Donate Now</button>
+                </div>
+                
+                <div class="donation-content" id="monthly-tab">
+                    <p>Become a monthly supporter to help us plan for long-term projects and sustainability.</p>
+                    
+                    <div class="amount-options">
+                        <button class="amount-option" data-amount="5">$5/mo</button>
+                        <button class="amount-option" data-amount="10">$10/mo</button>
+                        <button class="amount-option" data-amount="25">$25/mo</button>
+                        <button class="amount-option" data-amount="50">$50/mo</button>
+                        <button class="amount-option custom" data-amount="custom">Custom</button>
+                    </div>
+                    
+                    <div class="custom-amount" style="display: none;">
+                        <label for="custom-monthly-amount-input">Enter monthly amount:</label>
+                        <div class="custom-amount-input-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="custom-monthly-amount-input" min="1" step="1" placeholder="Enter amount">
+                            <span class="currency-suffix">/mo</span>
+                        </div>
+                    </div>
+                    
+                    <button class="button button-primary donate-button">Become a Monthly Supporter</button>
+                </div>
+                
+                <div class="donation-content" id="project-tab">
+                    <p>Fund specific projects that align with your interests and have a direct impact on physics education.</p>
+                    
+                    <div class="project-options">
+                        <div class="project-option">
+                            <input type="radio" name="project" id="project-simulations" value="simulations">
+                            <label for="project-simulations" class="project-label">
+                                <div class="project-info">
+                                    <h3>New Simulations</h3>
+                                    <p>Fund the development of new interactive physics simulations on topics like fluid dynamics, quantum mechanics, and more.</p>
+                                    <div class="project-goal">Goal: $5,000 • Raised so far: $2,750</div>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="project-option">
+                            <input type="radio" name="project" id="project-videos" value="videos">
+                            <label for="project-videos" class="project-label">
+                                <div class="project-info">
+                                    <h3>Video Lessons</h3>
+                                    <p>Support the creation of high-quality video lessons covering advanced physics topics with professional animations.</p>
+                                    <div class="project-goal">Goal: $7,500 • Raised so far: $3,200</div>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="project-option">
+                            <input type="radio" name="project" id="project-curriculum" value="curriculum">
+                            <label for="project-curriculum" class="project-label">
+                                <div class="project-info">
+                                    <h3>Comprehensive Curriculum</h3>
+                                    <p>Help us develop a complete physics curriculum for high school students with lessons, activities, and assessments.</p>
+                                    <div class="project-goal">Goal: $10,000 • Raised so far: $4,100</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="amount-options">
+                        <button class="amount-option" data-amount="50">$50</button>
+                        <button class="amount-option" data-amount="100">$100</button>
+                        <button class="amount-option" data-amount="250">$250</button>
+                        <button class="amount-option" data-amount="500">$500</button>
+                        <button class="amount-option custom" data-amount="custom">Custom</button>
+                    </div>
+                    
+                    <div class="custom-amount" style="display: none;">
+                        <label for="custom-project-amount-input">Enter amount:</label>
+                        <div class="custom-amount-input-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="custom-project-amount-input" min="1" step="1" placeholder="Enter amount">
+                        </div>
+                    </div>
+                    
+                    <button class="button button-primary donate-button">Fund this Project</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="donation-impact">
+            <div class="container">
+                <h2>Your Impact</h2>
+                <p>Here's how your support helps make physics education more accessible and engaging:</p>
+                
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <div class="impact-icon">🔬</div>
+                        <div class="impact-content">
+                            <h3>$25</h3>
+                            <p>Helps develop interactive elements for one simulation, making abstract physics concepts more tangible for students.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-icon">📚</div>
+                        <div class="impact-content">
+                            <h3>$50</h3>
+                            <p>Funds the creation of a comprehensive problem set with detailed solutions for students to practice and master concepts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-icon">🎬</div>
+                        <div class="impact-content">
+                            <h3>$100</h3>
+                            <p>Enables the production of a video lesson with professional animations and explanations of complex physics topics.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="impact-item">
+                        <div class="impact-icon">🌐</div>
+                        <div class="impact-content">
+                            <h3>$500</h3>
+                            <p>Supports the development of a complete module with simulations, videos, and assessments on a particular physics topic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donation-faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <h3>Is my donation tax-deductible?</h3>
+                    <p>Yes, PhysicsHub is a registered nonprofit educational organization, and all donations are tax-deductible to the extent allowed by law.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How is my donation used?</h3>
+                    <p>Approximately 85% of donations go directly to content development (simulations, videos, and educational materials), 10% to platform maintenance and improvements, and 5% to administrative costs.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I donate if I'm outside the United States?</h3>
+                    <p>Yes, we accept international donations through our secure payment processors. Currency conversion is handled automatically.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How do I cancel my monthly donation?</h3>
+                    <p>You can cancel or modify your monthly donation at any time by logging into your account and visiting the 'Donation Settings' page.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <!-- Footer content will be inserted by JavaScript -->
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
